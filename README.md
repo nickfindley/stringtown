@@ -1,2 +1,3 @@
 # stringtown
-Small website attempt
+
+Assembling building blocks for minisites.
