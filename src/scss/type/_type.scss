@@ -1,0 +1,115 @@
+@import "_type-conduit.scss";
+@import "_type-bulmer.scss";
+
+body {
+    font-variant-numeric: oldstyle-nums;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ITCConduit';
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-weight: normal;
+    letter-spacing: .375rem;
+    
+    @include media-up(768px) {
+        font-size: 5rem;
+        letter-spacing: 1rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    
+    @include media-up(768px) {
+        font-size: 3.5rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    
+    @include media-up(768px) {
+        font-size: 3rem;
+    }
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+
+    span {
+        font-size: 1.25rem;
+    }
+}
+
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+h1 {
+    font-weight: normal;
+    margin: 3rem -1rem 3rem 0;    // to compensate for letter-spacing
+    text-transform: uppercase;
+
+    span {
+        display: block;
+        font-size: 1.25rem;
+        
+        @include media-up(768px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.sc,
+.menu h4 span {
+    font-family: 'BulmerSC';
+}
+
+nav {
+    font-family: 'ITCConduit';
+    font-size: 1.25rem;
+    font-weight: normal;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+
+    @include media-up(768px) {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+}
+
+main {
+    font-family: 'Bulmer';
+    font-size: 1.25rem;
+    letter-spacing: .05rem;
+    line-height: 1.75;
+    margin: 0 auto;
+    text-align: left;
+    word-spacing: .125rem;
+
+    h2 {
+        font-weight: normal;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-family: 'Bulmer';
+        font-weight: normal;
+        letter-spacing: .2rem;
+    }
+}
+
+footer {
+    font-family: 'ITCConduit';
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+}

@@ -1,0 +1,139 @@
+@import "normalize/normalize.scss";
+
+@import "partials/_mixins.scss";
+@import "partials/_variables.scss";
+
+@import "type/_type.scss";
+
+@import "components/_card.scss";
+@import "components/_form.scss";
+@import "components/_navbar.scss";
+
+
+
+body {
+    background-color: $dark;
+    color: $white;
+    text-align: center;
+}
+
+a {
+    color: $medium;
+    transition: color .5s ease;
+     
+     &:hover {
+        color: $medium-dk;
+     }
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+
+    @include media-up(768px) {
+        width: 700px;
+    }
+
+    @include media-up(900px) {
+        width: 800px;
+    }
+
+    @include media-up(1100px) {
+        width: 900px;
+    }
+}
+
+.title-container {
+    filter: drop-shadow($box-shadow);
+}
+
+h1 {
+    background-color: $dark;
+    box-shadow: $box-shadow;
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+    margin: 0 0 2rem;
+    padding: 4rem 2rem 5rem;
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $medium-lt;
+        }
+    }
+}
+
+
+
+main {
+    background-color: $white;
+    box-shadow: $box-shadow;
+    color: $dark;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+main.menu {
+    ul {
+        line-height: 1.25;
+        list-style: none outside;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+        border-top: .125rem solid $dark;
+        margin: 2rem 0 1rem;
+        padding-top: 2rem;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 1rem 0 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.hours {
+    font-family: 'BulmerSC';
+    list-style: none outside;
+    margin-left: 0;
+    padding-left: 0;
+
+    span {
+        display: inline-block;
+        font-family: 'Bulmer';
+        width: 8rem;
+    }
+}
+
+#map {
+    box-shadow: $box-shadow;
+    height: 20rem;
+    margin: 2rem 0;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+}
+
+footer {
+    box-shadow: $box-shadow;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}

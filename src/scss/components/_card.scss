@@ -1,0 +1,71 @@
+.cards {
+    .card {
+        border: .0625rem solid $black;
+        margin: 0 0 2rem;
+        width: 100%;
+
+        img {
+            border-bottom: .0625rem solid $black;
+            height: 12rem;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        h4 {
+            font-family: 'ITCConduit';
+            font-size: 1.5rem;
+            font-weight: normal;
+            letter-spacing: .2rem;
+            margin: 0;
+            padding: 1rem;
+            text-transform: uppercase;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+            padding: 0 1rem 1rem;
+
+            .link {
+                font-family: 'ITCConduit';
+                letter-spacing: .05rem;
+            }
+        }
+
+        a {
+            color: $dark;
+
+            &:hover {
+                color: $medium;
+            }
+        }
+    }
+}
+
+@include media-up(768px) {
+    .cards {
+        display: flex;
+        justify-content: center;
+        margin: 0 -12.5%;
+
+        .card {
+            background-color: $light;
+            box-shadow: $box-shadow;
+            color: $dark;
+            line-height: 1.25;
+            margin: 1rem;
+            text-align: center;
+            transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+            width: calc(33.33333% - 2rem);
+
+            p span {
+                display: block;
+                margin: 2rem 0 1rem;;
+            }
+        }
+    }
+}

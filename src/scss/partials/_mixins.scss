@@ -1,0 +1,12 @@
+@mixin media-up($screen-size) {
+	@media (min-width: $screen-size) {
+		@content;
+	}
+}
+
+//	Up to (but not including) specified screen size
+@mixin media-down($screen-size) {
+	@media (max-width: $screen-size - 1) {
+		@content;
+	}
+}

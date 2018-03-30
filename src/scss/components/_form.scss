@@ -1,0 +1,67 @@
+ label {
+    display: block;
+    margin: 0;
+
+    @include media-up(768px) {
+        display: inline-block;
+        float: left;
+        margin-right: 1rem;
+        text-align: right;
+        width: 20%;
+    }
+}
+
+input,
+textarea {
+    border: .0625rem solid $light;
+    border-radius: .25rem;
+    color: $medium;
+    font-family: $sans-serif;
+    padding: .25rem;
+    width: 100%;
+
+    @include media-up(576px) {
+        width: 80%;
+    }
+
+    @include media-up(768px) {
+        width: 60%;
+    }
+
+    &:focus {
+        border: .125rem solid $medium-lt;
+    }
+}
+
+input[type=submit],
+button,
+select {
+    background-color: $medium-dk;
+    color: $white;
+    padding: .75rem;
+    width: auto;
+
+    @include media-up(768px) {
+        margin-left: calc(20% + 1rem);
+    }
+}
+
+.success {
+    background-color: lighten($success, 50%);
+    border: .125rem solid $success;
+    color: $success;
+    padding: 2rem;
+}
+
+.failure {
+    background-color: lighten($failure, 50%);
+    border: .125rem solid $failure;
+    color: $failure;
+    padding: 2rem;
+}
+
+.success h4, .success p,
+.failure h4, .failure p {
+    line-height: 1.25;
+    margin: 0;
+}
